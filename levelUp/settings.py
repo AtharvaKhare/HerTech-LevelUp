@@ -45,6 +45,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -133,6 +134,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = 'staticfiles'
+
+STATICFILES_DIRS = (
+    #os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, 'HerTech-LevelUp-UI', 'build'),
+    os.path.join(BASE_DIR, 'HerTech-LevelUp-UI', 'build', 'static'),
+)
+
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
@@ -143,5 +152,5 @@ CORS_ORIGIN_WHITELIST = (
         'http://192.168.43.211:3000',
 )
 
-#import django_heroku
-#django_heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())

@@ -8,6 +8,7 @@ from skill_learn.serializers import *
 
 import json
 import math
+import os
 
 
 def probability(rating1, rating2):
@@ -40,7 +41,10 @@ class QuestionViewSet(viewsets.ModelViewSet):
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at skill learn.")
+    output = ""
+    with open(os.path.join('staticfiles', 'index.html')) as ipfile:
+        output = ipfile.read()
+    return HttpResponse(output)
 
 
 @csrf_exempt

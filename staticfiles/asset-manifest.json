@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6f995720.chunk.css",
+    "main.js": "/static/js/main.8c9ab6f6.chunk.js",
+    "main.js.map": "/static/js/main.8c9ab6f6.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.817ede5b.chunk.css": "/static/css/2.817ede5b.chunk.css",
+    "static/js/2.d8aa45e0.chunk.js": "/static/js/2.d8aa45e0.chunk.js",
+    "static/js/2.d8aa45e0.chunk.js.map": "/static/js/2.d8aa45e0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bbefefab2f6eef226062207d40a57619.js": "/precache-manifest.bbefefab2f6eef226062207d40a57619.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.817ede5b.chunk.css.map": "/static/css/2.817ede5b.chunk.css.map",
+    "static/css/main.6f995720.chunk.css.map": "/static/css/main.6f995720.chunk.css.map",
+    "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/logo.svg": "/static/media/logo.bd8bd909.svg",
+    "static/media/topic_science.png": "/static/media/topic_science.7c7e2dd9.png"
+  }
+}
