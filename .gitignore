@@ -2,6 +2,7 @@
 .AppleDouble
 .LSOverride
 *.pyc
+*.swp
 
 env/
 __pycache__/
