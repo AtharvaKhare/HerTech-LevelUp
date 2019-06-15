@@ -133,6 +133,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = 'staticfiles'
+
+STATICFILES_DIRS = (
+    #os.path.join(BASE_DIR, 'assets'),
+    os.path.join(BASE_DIR, 'HerTech-LevelUp-UI', 'build'),
+    os.path.join(BASE_DIR, 'HerTech-LevelUp-UI', 'build', 'static'),
+)
+
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 
