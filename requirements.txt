@@ -2,3 +2,6 @@ django
 gunicorn
 django-heroku
 psycopg2
+djangorestframework
+markdown
+django-filter
