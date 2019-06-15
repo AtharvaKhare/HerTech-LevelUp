@@ -14,6 +14,7 @@ router.register(r'question', views.QuestionViewSet)
 urlpatterns = [
     path('', views.index, name='index'),
     path('api/v0/', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls')),
+    path('api/v0/update_ratings/', views.update_ratings, name='update_ratings'),
+    path('api/v0/show_questions/', views.show_questions, name='show_questions'),
 ]
 

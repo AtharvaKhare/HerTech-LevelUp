@@ -10,7 +10,7 @@ class Student(models.Model):
 
 class Topic(models.Model):
     name = models.TextField(blank=True, null=True)
-    rating = models.IntegerField(default=0)
+    rating = models.FloatField(default=0)
 
     def __str__(self):
         return self.name
@@ -19,16 +19,17 @@ class Topic(models.Model):
 class UserRating(models.Model):
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    rating = models.IntegerField(blank=True, null=True)
+    rating = models.FloatField(blank=True, null=True)
 
     def __str__(self):
-        return self.student.username + "(" + self.topic + "): " + str(self.rating)
+        return self.student.username + "(" + self.topic.name + "): " + str(self.rating)
 
 
 class Text(models.Model):
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     identifier = models.CharField(max_length=200, blank=True, null=True)
     text = models.TextField(blank=True, null=True)
+    rating = models.FloatField(default=0)
 
     def __str__(self):
         return self.topic.name + ": " + self.identifier
@@ -43,7 +44,7 @@ class Question(models.Model):
     option3 = models.TextField(blank=True, null=True)
     option4 = models.TextField(blank=True, null=True)
     correct = models.TextField(blank=True, null=True)
-    rating = models.IntegerField(default=0)
+    rating = models.FloatField(default=0)
 
     def __str__(self):
         return self.question
